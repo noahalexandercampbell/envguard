@@ -1,0 +1,7 @@
+required:
+  - CI
+  - COMMIT_SHA
+allow_extra: false
+config:
+  sensitive_prefixes: []
+  sensitive_patterns: []

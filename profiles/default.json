@@ -1,0 +1,8 @@
+{
+    "required": ["HOST", "PORT", "DATABASE_URL", "API_KEY"],
+    "allow_extra": true,
+    "config": {
+        "sensitive_prefixes": ["API_"],
+        "sensitive_patterns": [".*_SECRET$"]
+    }
+}

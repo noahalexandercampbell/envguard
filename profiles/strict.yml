@@ -1,0 +1,6 @@
+required:
+  - DATABASE_URL
+allow_extra: false
+config:
+  sensitive_prefixes: []
+  sensitive_patterns: []
