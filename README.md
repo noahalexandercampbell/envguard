@@ -4,6 +4,8 @@
 
 Compare one or more `.env` files against a contract and immediately see missing, extra, or empty variables. Useful for onboarding, CI checks, and eliminating `works on my machine` bugs.
 
+Source and issues: https://github.com/noahalexandercampbell/envguard
+
 ## Features
 
 - Load `.env`, `.env.local`, `.env.ci`, and other dotenv variants.
@@ -31,7 +33,7 @@ envguard check --file .env.local --profile profiles/default.yml
 envguard diff --file .env --profile profiles/production.yml
 
 # Merge plus validation in one step
-envguard merge --base .env --overlay .env.local --profile profiles/default.yml
+envguard merge --base .env --overlay .env.local --destination merged.env --profile profiles/default.yml
 ```
 
 ## Project structure
@@ -42,18 +44,17 @@ envguard/
 │   ├── __init__.py
 │   ├── cli.py
 │   ├── loader.py
+│   ├── models.py
 │   ├── profile.py
 │   └── reporter.py
+├── profiles/
+│   ├── ci.yml
+│   ├── default.yml
+│   ├── strict.yml
+│   ├── default.json
+│   └── strict.json
 ├── pyproject.toml
 ├── tests/
 │   └── test_envguard.py
 └── README.md
 ```
-
-## Tags / keywords
-
-- dotenv
-- environment variables
-- validation
-- CI helper
-- Python CLI
