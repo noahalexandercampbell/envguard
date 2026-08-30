@@ -11,6 +11,9 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = ["PyYAML"]
 
+[project.urls]
+Repository = "https://github.com/noahalexandercampbell/envguard"
+
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
 
