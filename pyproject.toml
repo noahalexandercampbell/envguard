@@ -9,7 +9,7 @@ description = "Environment variable guard for local builds and CI"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-dependencies = ["PyYAML"]
+dependencies = ["PyYAML", "python-dotenv"]
 
 [project.urls]
 Repository = "https://github.com/noahalexandercampbell/envguard"

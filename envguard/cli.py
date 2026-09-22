@@ -17,7 +17,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command")
 
     check = subparsers.add_parser("check")
-    check.add_argument("--file", default=None)
+    check.add_argument("--file", default=None, type=Path)
     check.add_argument("--profile", required=True, type=Path)
     check.add_argument("--json", action="store_true")
 
@@ -38,7 +38,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 def load_profile(path: Path) -> Profile:
     with path.open("r", encoding="utf-8") as file:
-        payload = json.load(file)
+        if path.suffix.lower() in (".yml", ".yaml"):
+            import yaml
+            payload = yaml.safe_load(file)
+        else:
+            import json
+            payload = json.load(file)
     return Profile.from_dict(payload)
 
 
