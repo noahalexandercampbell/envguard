@@ -1,0 +1,14 @@
+required:
+  - HOST
+  - PORT
+  - DATABASE_URL
+  - API_KEY
+  - SECRET_KEY
+allow_extra: false
+config:
+  sensitive_prefixes:
+    - API_
+    - SECRET_
+  sensitive_patterns:
+    - .*_SECRET$
+    - ".*KEY$"

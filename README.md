@@ -38,15 +38,15 @@ envguard merge --base .env --overlay .env.local --destination merged.env --profi
 
 ## Project structure
 
-```
+```flat
 envguard/
-├── envguard/
-│   ├── __init__.py
-│   ├── cli.py
-│   ├── loader.py
-│   ├── models.py
-│   ├── profile.py
-│   └── reporter.py
+├── __init__.py
+├── __main__.py
+├── cli.py
+├── loader.py
+├── models.py
+├── profile.py
+├── reporter.py
 ├── profiles/
 │   ├── ci.yml
 │   ├── default.yml
